@@ -1,0 +1,124 @@
+# Project: WebRtcAudioTest
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o ../WebRtcMoudle/analog_agc.o ../WebRtcMoudle/complex_bit_reverse.o ../WebRtcMoudle/complex_fft.o ../WebRtcMoudle/copy_set_operations.o ../WebRtcMoudle/cross_correlation.o ../WebRtcMoudle/digital_agc.o ../WebRtcMoudle/division_operations.o ../WebRtcMoudle/dot_product_with_scale.o ../WebRtcMoudle/downsample_fast.o ../WebRtcMoudle/energy.o ../WebRtcMoudle/fft4g.o ../WebRtcMoudle/get_scaling_square.o ../WebRtcMoudle/min_max_operations.o ../WebRtcMoudle/noise_suppression.o ../WebRtcMoudle/noise_suppression_x.o ../WebRtcMoudle/ns_core.o ../WebRtcMoudle/nsx_core.o ../WebRtcMoudle/nsx_core_c.o ../WebRtcMoudle/nsx_core_neon_offsets.o ../WebRtcMoudle/real_fft.o ../WebRtcMoudle/resample.o ../WebRtcMoudle/resample_48khz.o ../WebRtcMoudle/resample_by_2.o ../WebRtcMoudle/resample_by_2_internal.o ../WebRtcMoudle/resample_by_2_mips.o ../WebRtcMoudle/resample_fractional.o ../WebRtcMoudle/ring_buffer.o ../WebRtcMoudle/spl_init.o ../WebRtcMoudle/spl_sqrt.o ../WebRtcMoudle/spl_sqrt_floor.o ../WebRtcMoudle/splitting_filter.o ../WebRtcMoudle/vector_scaling_operations.o
+LINKOBJ  = main.o ../WebRtcMoudle/analog_agc.o ../WebRtcMoudle/complex_bit_reverse.o ../WebRtcMoudle/complex_fft.o ../WebRtcMoudle/copy_set_operations.o ../WebRtcMoudle/cross_correlation.o ../WebRtcMoudle/digital_agc.o ../WebRtcMoudle/division_operations.o ../WebRtcMoudle/dot_product_with_scale.o ../WebRtcMoudle/downsample_fast.o ../WebRtcMoudle/energy.o ../WebRtcMoudle/fft4g.o ../WebRtcMoudle/get_scaling_square.o ../WebRtcMoudle/min_max_operations.o ../WebRtcMoudle/noise_suppression.o ../WebRtcMoudle/noise_suppression_x.o ../WebRtcMoudle/ns_core.o ../WebRtcMoudle/nsx_core.o ../WebRtcMoudle/nsx_core_c.o ../WebRtcMoudle/nsx_core_neon_offsets.o ../WebRtcMoudle/real_fft.o ../WebRtcMoudle/resample.o ../WebRtcMoudle/resample_48khz.o ../WebRtcMoudle/resample_by_2.o ../WebRtcMoudle/resample_by_2_internal.o ../WebRtcMoudle/resample_by_2_mips.o ../WebRtcMoudle/resample_fractional.o ../WebRtcMoudle/ring_buffer.o ../WebRtcMoudle/spl_init.o ../WebRtcMoudle/spl_sqrt.o ../WebRtcMoudle/spl_sqrt_floor.o ../WebRtcMoudle/splitting_filter.o ../WebRtcMoudle/vector_scaling_operations.o
+LIBS     = -L"D:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"D:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = WebRtcAudioTest.exe
+CXXFLAGS = $(CXXINCS) -DWEBRTC_POSIX
+CFLAGS   = $(INCS) -DWEBRTC_POSIX
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+../WebRtcMoudle/analog_agc.o: ../WebRtcMoudle/analog_agc.c
+	$(CPP) -c ../WebRtcMoudle/analog_agc.c -o ../WebRtcMoudle/analog_agc.o $(CXXFLAGS)
+
+../WebRtcMoudle/complex_bit_reverse.o: ../WebRtcMoudle/complex_bit_reverse.c
+	$(CPP) -c ../WebRtcMoudle/complex_bit_reverse.c -o ../WebRtcMoudle/complex_bit_reverse.o $(CXXFLAGS)
+
+../WebRtcMoudle/complex_fft.o: ../WebRtcMoudle/complex_fft.c
+	$(CPP) -c ../WebRtcMoudle/complex_fft.c -o ../WebRtcMoudle/complex_fft.o $(CXXFLAGS)
+
+../WebRtcMoudle/copy_set_operations.o: ../WebRtcMoudle/copy_set_operations.c
+	$(CPP) -c ../WebRtcMoudle/copy_set_operations.c -o ../WebRtcMoudle/copy_set_operations.o $(CXXFLAGS)
+
+../WebRtcMoudle/cross_correlation.o: ../WebRtcMoudle/cross_correlation.c
+	$(CPP) -c ../WebRtcMoudle/cross_correlation.c -o ../WebRtcMoudle/cross_correlation.o $(CXXFLAGS)
+
+../WebRtcMoudle/digital_agc.o: ../WebRtcMoudle/digital_agc.c
+	$(CPP) -c ../WebRtcMoudle/digital_agc.c -o ../WebRtcMoudle/digital_agc.o $(CXXFLAGS)
+
+../WebRtcMoudle/division_operations.o: ../WebRtcMoudle/division_operations.c
+	$(CPP) -c ../WebRtcMoudle/division_operations.c -o ../WebRtcMoudle/division_operations.o $(CXXFLAGS)
+
+../WebRtcMoudle/dot_product_with_scale.o: ../WebRtcMoudle/dot_product_with_scale.c
+	$(CPP) -c ../WebRtcMoudle/dot_product_with_scale.c -o ../WebRtcMoudle/dot_product_with_scale.o $(CXXFLAGS)
+
+../WebRtcMoudle/downsample_fast.o: ../WebRtcMoudle/downsample_fast.c
+	$(CPP) -c ../WebRtcMoudle/downsample_fast.c -o ../WebRtcMoudle/downsample_fast.o $(CXXFLAGS)
+
+../WebRtcMoudle/energy.o: ../WebRtcMoudle/energy.c
+	$(CPP) -c ../WebRtcMoudle/energy.c -o ../WebRtcMoudle/energy.o $(CXXFLAGS)
+
+../WebRtcMoudle/fft4g.o: ../WebRtcMoudle/fft4g.c
+	$(CPP) -c ../WebRtcMoudle/fft4g.c -o ../WebRtcMoudle/fft4g.o $(CXXFLAGS)
+
+../WebRtcMoudle/get_scaling_square.o: ../WebRtcMoudle/get_scaling_square.c
+	$(CPP) -c ../WebRtcMoudle/get_scaling_square.c -o ../WebRtcMoudle/get_scaling_square.o $(CXXFLAGS)
+
+../WebRtcMoudle/min_max_operations.o: ../WebRtcMoudle/min_max_operations.c
+	$(CPP) -c ../WebRtcMoudle/min_max_operations.c -o ../WebRtcMoudle/min_max_operations.o $(CXXFLAGS)
+
+../WebRtcMoudle/noise_suppression.o: ../WebRtcMoudle/noise_suppression.c
+	$(CPP) -c ../WebRtcMoudle/noise_suppression.c -o ../WebRtcMoudle/noise_suppression.o $(CXXFLAGS)
+
+../WebRtcMoudle/noise_suppression_x.o: ../WebRtcMoudle/noise_suppression_x.c
+	$(CPP) -c ../WebRtcMoudle/noise_suppression_x.c -o ../WebRtcMoudle/noise_suppression_x.o $(CXXFLAGS)
+
+../WebRtcMoudle/ns_core.o: ../WebRtcMoudle/ns_core.c
+	$(CPP) -c ../WebRtcMoudle/ns_core.c -o ../WebRtcMoudle/ns_core.o $(CXXFLAGS)
+
+../WebRtcMoudle/nsx_core.o: ../WebRtcMoudle/nsx_core.c
+	$(CPP) -c ../WebRtcMoudle/nsx_core.c -o ../WebRtcMoudle/nsx_core.o $(CXXFLAGS)
+
+../WebRtcMoudle/nsx_core_c.o: ../WebRtcMoudle/nsx_core_c.c
+	$(CPP) -c ../WebRtcMoudle/nsx_core_c.c -o ../WebRtcMoudle/nsx_core_c.o $(CXXFLAGS)
+
+../WebRtcMoudle/nsx_core_neon_offsets.o: ../WebRtcMoudle/nsx_core_neon_offsets.c
+	$(CPP) -c ../WebRtcMoudle/nsx_core_neon_offsets.c -o ../WebRtcMoudle/nsx_core_neon_offsets.o $(CXXFLAGS)
+
+../WebRtcMoudle/real_fft.o: ../WebRtcMoudle/real_fft.c
+	$(CPP) -c ../WebRtcMoudle/real_fft.c -o ../WebRtcMoudle/real_fft.o $(CXXFLAGS)
+
+../WebRtcMoudle/resample.o: ../WebRtcMoudle/resample.c
+	$(CPP) -c ../WebRtcMoudle/resample.c -o ../WebRtcMoudle/resample.o $(CXXFLAGS)
+
+../WebRtcMoudle/resample_48khz.o: ../WebRtcMoudle/resample_48khz.c
+	$(CPP) -c ../WebRtcMoudle/resample_48khz.c -o ../WebRtcMoudle/resample_48khz.o $(CXXFLAGS)
+
+../WebRtcMoudle/resample_by_2.o: ../WebRtcMoudle/resample_by_2.c
+	$(CPP) -c ../WebRtcMoudle/resample_by_2.c -o ../WebRtcMoudle/resample_by_2.o $(CXXFLAGS)
+
+../WebRtcMoudle/resample_by_2_internal.o: ../WebRtcMoudle/resample_by_2_internal.c
+	$(CPP) -c ../WebRtcMoudle/resample_by_2_internal.c -o ../WebRtcMoudle/resample_by_2_internal.o $(CXXFLAGS)
+
+../WebRtcMoudle/resample_by_2_mips.o: ../WebRtcMoudle/resample_by_2_mips.c
+	$(CPP) -c ../WebRtcMoudle/resample_by_2_mips.c -o ../WebRtcMoudle/resample_by_2_mips.o $(CXXFLAGS)
+
+../WebRtcMoudle/resample_fractional.o: ../WebRtcMoudle/resample_fractional.c
+	$(CPP) -c ../WebRtcMoudle/resample_fractional.c -o ../WebRtcMoudle/resample_fractional.o $(CXXFLAGS)
+
+../WebRtcMoudle/ring_buffer.o: ../WebRtcMoudle/ring_buffer.c
+	$(CPP) -c ../WebRtcMoudle/ring_buffer.c -o ../WebRtcMoudle/ring_buffer.o $(CXXFLAGS)
+
+../WebRtcMoudle/spl_init.o: ../WebRtcMoudle/spl_init.c
+	$(CPP) -c ../WebRtcMoudle/spl_init.c -o ../WebRtcMoudle/spl_init.o $(CXXFLAGS)
+
+../WebRtcMoudle/spl_sqrt.o: ../WebRtcMoudle/spl_sqrt.c
+	$(CPP) -c ../WebRtcMoudle/spl_sqrt.c -o ../WebRtcMoudle/spl_sqrt.o $(CXXFLAGS)
+
+../WebRtcMoudle/spl_sqrt_floor.o: ../WebRtcMoudle/spl_sqrt_floor.c
+	$(CPP) -c ../WebRtcMoudle/spl_sqrt_floor.c -o ../WebRtcMoudle/spl_sqrt_floor.o $(CXXFLAGS)
+
+../WebRtcMoudle/splitting_filter.o: ../WebRtcMoudle/splitting_filter.c
+	$(CPP) -c ../WebRtcMoudle/splitting_filter.c -o ../WebRtcMoudle/splitting_filter.o $(CXXFLAGS)
+
+../WebRtcMoudle/vector_scaling_operations.o: ../WebRtcMoudle/vector_scaling_operations.c
+	$(CPP) -c ../WebRtcMoudle/vector_scaling_operations.c -o ../WebRtcMoudle/vector_scaling_operations.o $(CXXFLAGS)

@@ -1,0 +1,3 @@
+AGC->Init
+AGC->Init: minLevel = 0, maxAnalog = 255, maxLevel = 318
+
